@@ -1,0 +1,66 @@
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-header">
+          <h5>Ingrese  Equipo</h5>
+        </div>
+        <div class="card-body">
+          <form action="/admin/equipo" method="POST">
+            <div class="form-group">
+              <input type="text" name="Nombre" placeholder="Nombre Equipo" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Delegado" placeholder="Delegado" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" name="id" placeholder="id" class="form-control">
+            </div>
+            <button class="btn btn-primary btn-block">
+              ingresa Equipo
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="col-md-6">
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+      <th scope="col">Escu</th>
+      <th scope="col">Id</th>
+      <th scope="col">Delegado</th>
+      <th scope="col">Edit</th>
+
+    </tr>
+  </thead>
+ 
+ {{#each ediciones}}
+  <tbody class="h6">
+    <th scope="col">{{Nombre_Equipo}}</th>
+    <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{id_plantel}}</th>
+    <th scope="col">{{Delegado}}</th>
+    <th scope="col"><a href="editarequipos/{{id_plantel}}">Editar</a>  </th>
+
+  </tbody>
+
+
+
+
+{{/each}}
+</table>
+</div>
+
+</div>

@@ -1,0 +1,35 @@
+{{#each ediciones}}
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-header">
+          <h5>Ingrese  Equipo</h5>
+        </div>
+        <div class="card-body">
+          <form action="/admin/editarjugador/:{{ID_FB}}" method="POST">
+            <div class="form-group">
+              <input type="text" value="{{Nombres}}" name="Nombres" placeholder="Nombre Equipo" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{Curp}}" name="Curp" placeholder="CURP" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{ID_FB}}" name="ID_FB" placeholder="id" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{FOTO}}" name="FOTO" placeholder="FOTO" class="form-control">
+            </div>
+            
+            <button class="btn btn-primary btn-block">
+              ingresa Equipo
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}

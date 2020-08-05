@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+
+<a class="navbar-brand" href="/">Inicio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Futbol
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/ligaed">Liga ED</a>
+          <a class="dropdown-item" href="/copafb">Copa FB</a>
+          <a class="dropdown-item" href="/kids">Kids</a>
+        
+        </div>
+      </li>  
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Hip-Hop <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> OND <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      {{#if user}}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Admin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="/admin/menu">Menu </a>
+
+         <a class="dropdown-item" href="/admin/equipo">Equipos</a>
+         <a class="dropdown-item" href="/admin/jugadores">Jugadores</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/logout">Cerrar Sesion</a>
+        </div>
+      </li>  
+      {{/if}}
+    </ul>
+  </div>
+
+
+  </div>
+</nav>

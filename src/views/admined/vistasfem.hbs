@@ -1,0 +1,60 @@
+<div class="container p-4"> </div>
+ <div class="row">
+
+{{#each vistas}}
+
+<div class="border-primary mb-3 col-md-5 mx-auto ">
+  <div class="card text-center">
+      <div class="card-body  ">
+
+         <div class="container">
+
+        <div class="card-header "> 
+
+         <div class="row " >
+            
+    <div class="col ">
+     <img src="/portada/ligaed.png" width="30px" height="45px" alt="..." class="">
+
+    </div>
+    <div class="col"> <h5>Liga ED </h5> </div>
+
+
+         </div>
+
+        </div>
+
+         <div class="row  bg-light font-weight-bold py-3 " >
+            
+    <div class="col " ><h5>J-{{Jornada}}</h5></div>
+    <div class="col">{{Fecha}}</div>
+    <div class="w-100 py-2">{{hora}}</div>
+
+
+    
+    <div class="col">
+    <img src="{{Escudolc}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+    <div class="col">{{Equipolc}}</div>
+    <div class="col">{{Nombre_Equipo}}</div>
+    <div class="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+        <div class="w-100"></div>
+    <div class="col">{{GF}} - {{GC}}</div>
+       <div class="w-100"></div>
+    
+    
+     </div>
+
+     <div class="card-footer">
+
+         <div class="col">Femenil Dominical</div>
+    </div>
+    <a href="/admin/edfemdelete/{{ID}}" class="btn btn-danger">Borrar</a>
+    <a href="/admin/edfemedit/{{ID}}" class="btn btn-secondary">Editar</a>
+        </div>
+        </div>
+  </div>
+</div>
+
+{{/each}}
+ </div>

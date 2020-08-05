@@ -1,0 +1,290 @@
+<style type="text/css">
+.card {
+  display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+    padding: 20px;
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+.card-content {
+  padding:15px;
+  text-align:center;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+}
+
+
+</style>
+
+
+
+	<!--Esto es un comentario-->
+{{#each registro}}
+
+<div class="container-fluid">
+  
+	<!--clasificacion de filas-->
+
+   <div class="row">
+
+        <div class="col-md-3 pl-3">
+            <div class="card">
+                <a class="img-card img-fluid"  href="">
+                    <img src="{{Foto}}" />
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="/Futbol">
+                     {{Nombres}}
+                        </a>
+                    </h4>
+                    <div class="">
+25-abril-2006
+                    </div>
+                </div>
+                <div class="card-read-more">
+     ID : {{ID_FB}}                </div>
+                     </div>
+                </div>
+{{/each}}
+
+<div class="col-md-4">
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Logro</th>
+      <th scope="col">Eq</th>
+      <th scope="col">Liga</th>
+      <th scope="col">Cat.</th>
+            <th scope="col">Torneo</th>
+
+    </tr>
+  </thead>
+ 
+ {{#each premiacion}}
+  <tbody class="h6">
+    <th scope="col">{{Premio}}</th>
+    <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Liga}}</th>
+    <th scope="col">{{Categoria}}</th>
+        <th scope="col">{{Torneo}}</th>
+
+  </tbody>
+
+
+
+
+{{/each}}
+</table>
+</div>
+
+<div class="col-md-4">
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Goles</th>
+      <th scope="col">Equipo</th>
+      <th scope="col">Torneo</th>
+      <th scope="col">Dorsal</th>
+        <th scope="col">Liga</th>
+
+
+    </tr>
+  </thead>
+ 
+ {{#each toractual}}
+  <tbody class="h6">
+    <th scope="col">{{G}}</th>
+    <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{id_torneo}}</th>
+    <th scope="col">{{Dorsal}}</th>
+    <th scope="col">ED</th>
+
+  </tbody>
+
+
+
+
+
+
+
+{{/each}}
+</table>
+</div>
+</div>
+
+
+   <div class="row">
+
+<div class="col">
+    <h8> Goles Totales Libre ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+
+      <th scope="col">Goles</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+ {{#each goleslibre}}
+  <tbody class="h6">
+<th scope="col">
+    <img src="{{Foto}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{goles}}</th>
+    <th scope="col">{{Nombres}}</th>
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/edlibreglobal">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col">
+    <h8> Goles Totales Mixto ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+
+      <th scope="col">Goles</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+ {{#each golesmix}}
+  <tbody class="h6">
+<th scope="col">
+    <img src="{{Foto}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{goles}}</th>
+    <th scope="col">{{Nombres}}</th>
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/edmixtaglobal">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col">
+    <h8> Goles Totales Femenil ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+
+      <th scope="col">Goles</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+ {{#each golesfeme}}
+  <tbody class="h6">
+<th scope="col">
+    <img src="{{Foto}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{goles}}</th>
+    <th scope="col">{{Nombres}}</th>
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/edfemeglobal">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col">
+    <h8> Goles Totales Sub-23 ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+
+      <th scope="col">Goles</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+ {{#each goles23}}
+  <tbody class="h6">
+<th scope="col">
+    <img src="{{Foto}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{goles}}</th>
+    <th scope="col">{{Nombres}}</th>
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/eds23global">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col">
+    <h8> Goles Totales sub-20</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Foto</th>
+
+      <th scope="col">Goles</th>
+      <th scope="col">Nombre</th>
+    </tr>
+  </thead>
+ {{#each goles20}}
+  <tbody class="h6">
+<th scope="col">
+    <img src="{{Foto}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{goles}}</th>
+    <th scope="col">{{Nombres}}</th>
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/eds20global">ver Ranking Completo </a></h8>
+</div>
+
+
+
+</div>

@@ -1,0 +1,31 @@
+<div class="col-md-5">
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+      <th scope="col">Escu</th>
+      <th scope="col">Id</th>
+      <th scope="col">Delegado</th>
+            
+
+    </tr>
+  </thead>
+ 
+ {{#each idbuscar}}
+  <tbody class="h6">
+    <th scope="col">{{Nombre_Equipo}}</th>
+    <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{id_plantel}}</th>
+    <th scope="col">{{Delegado}}</th>
+
+  </tbody>
+
+
+
+
+{{/each}}
+</table>
+</div>

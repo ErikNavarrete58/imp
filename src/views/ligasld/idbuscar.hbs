@@ -1,0 +1,35 @@
+
+
+<div class="col-md-5">
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">foto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apeidos.</th>
+            <th scope="col">Fecha de nacimiento</th>
+            
+
+    </tr>
+  </thead>
+ 
+ {{#each idbuscar}}
+  <tbody class="h6">
+    <th scope="col">{{ID_FB}}</th>
+    <th scope="col">
+    <img src="{{Foto}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Nombres}}</th>
+    <th scope="col">{{Apellido_Paterno}}</th>
+        <th scope="col">{{Fecha_Nacimiento}}</th>
+
+  </tbody>
+
+
+
+
+{{/each}}
+</table>
+</div>

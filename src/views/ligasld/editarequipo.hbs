@@ -1,0 +1,37 @@
+{{#each ediciones}}
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-header">
+          <h5>Ingrese  Equipo</h5>
+        </div>
+        <div class="card-body">
+          <form action="/admin/editarplantel/:{{id_plantel}}" method="POST">
+            <div class="form-group">
+              <input type="text" value="{{Nombre_Equipo}}" name="Nombre" placeholder="Nombre Equipo" class="form-control" autofocus>
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{Delegado}}" name="Delegado" placeholder="Delegado" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{id_plantel}}" name="id" placeholder="id" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{Escudo}}" name="Escudo" placeholder="id" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" value="{{Fecha_Registro}}" name="Fecha_Registro" placeholder="id" class="form-control">
+            </div>
+            <button class="btn btn-primary btn-block">
+              ingresa Equipo
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}

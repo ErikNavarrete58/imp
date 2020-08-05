@@ -1,0 +1,183 @@
+<div class="container p-4">
+  <div class="row">
+     <div class="col-md-5 mx-auto">
+         <div class="card">
+            <div class="card-body">
+               <form action="/admin/eds20add" method="POST">
+              
+         
+            
+              <div class="form-row">
+         <div class="col">
+
+              <div class="form-group">
+               <input type="number" name="Jornada" class="form-control" placeholder="Jornada">
+              </div>
+         </div>
+         <div class="col">
+               <div class="form-group">
+               <input type="date" name="Fecha" class="form-control" placeholder="Fecha">
+              </div>
+
+
+ </div>
+</div>
+            <div class="form-row">
+              <div class="col">
+
+                <div class="form-group">
+                <select name="Equipo" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select>   
+              
+                </div>
+                </div>
+              <div class="col">
+               <div class="form-group">
+             <select name="Rival" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select>              
+                    </div>
+               </div>
+               <div class="col">
+               <div class="form-group">
+               <input type="text" name="hora" class="form-control" placeholder="hora">
+               </div>
+               </div>
+         </div>
+
+<div class="form-row">
+         <div class="col">
+
+           <div class="form-group">
+ <select name="Equipo2" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+           <div class="col">
+               <div class="form-group">
+ <select name="Rival2" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+            <div class="col">
+               <div class="form-group">
+               <input type="text" name="hora2" class="form-control" placeholder="hora2">
+               </div>
+               </div>
+        
+         </div>
+
+
+<div class="form-row">
+         <div class="col">
+
+           <div class="form-group">
+ <select name="Equipo3" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+           <div class="col">
+               <div class="form-group">
+ <select name="Rival3" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+            <div class="col">
+               <div class="form-group">
+               <input type="text" name="hora3" class="form-control" placeholder="hora3">
+               </div>
+               </div>
+        
+         </div>
+
+<div class="form-row">
+         <div class="col">
+
+           <div class="form-group">
+ <select name="Equipo4" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+           <div class="col">
+               <div class="form-group">
+ <select name="Rival4" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+            <div class="col">
+               <div class="form-group">
+               <input type="text" name="hora4" class="form-control" placeholder="hora4">
+               </div>
+               </div>
+        
+         </div>
+
+         <div class="form-row">
+         <div class="col">
+
+           <div class="form-group">
+ <select name="Equipo5" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+           <div class="col">
+               <div class="form-group">
+ <select name="Rival5" class="form-control" placeholder="Equipo1">
+               {{#each opciones}}
+                <option value="{{id_plantel}}">{{id_plantel}}-{{Nombre_Equipo}}</option>
+                 {{/each}}
+                </select> 
+              </div>
+              </div>
+            <div class="col">
+               <div class="form-group">
+               <input type="text" name="hora5" class="form-control" placeholder="hora5">
+               </div>
+               </div>
+        
+         </div>
+
+              <div class="form-group">
+              <button class="btn btn-success btn-block"> enviar </button>
+              </div>
+
+              
+
+               </form>
+            </div>
+         </div>
+     </div>
+  </div>
+</div>
+
+
+
+
+
+

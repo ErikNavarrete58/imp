@@ -1,0 +1,346 @@
+<style type="text/css">
+.card {
+  display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+    padding: 10px;
+  width: 100%;
+  height:250px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width:100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+.card-content {
+  padding:15px;
+  text-align:center;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+}
+
+
+</style>
+
+
+
+	<!--Esto es un comentario-->
+{{#each registro}}
+
+<div class="container-fluid">
+  
+	<!--clasificacion de filas-->
+
+   <div class="row">
+
+        <div class="col-md-3">
+            <div class="card">
+                <a    href="">
+                    <img class="img-card img-fluid img-thumbnail"  src="{{Escudo}} " />
+                </a>
+                <br />
+                <div class="card-content">
+                    <h4 class="card-title">
+                        <a href="/Futbol">
+                        <h3>
+                     {{Nombre_Equipo}}
+                     </h3>
+                        </a>
+                    </h4>
+                    <div class="">
+Delegado ; {{Delegado}}   
+                 </div>
+                </div>
+                <div class="card-read-more">
+     ID : {{id_plantel}}          
+           </div>
+         </div>
+     </div>
+     
+{{/each}}
+
+
+<div class="col-md-4">
+    <h3> Campeonatos</h3>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Liga</th>
+      <th scope="col">Torneo</th>
+      <th scope="col">Categoria</th>
+     
+    </tr>
+  </thead>
+ 
+ {{#each logrosequipos}}
+  <tbody class="h6">
+    <th scope="col">{{Liga}}</th>
+    <th scope="col">{{Torneo}}</th>
+
+    </th>
+    <th scope="col">{{Categoria}}</th>
+    
+
+  </tbody>
+
+
+
+
+{{/each}}
+</table>
+
+</div>
+
+
+
+<div class="col-md-4">
+    <h3> Ranking Historico ED</h3>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+     <th scope="col">DFG</th>
+    </tr>
+  </thead>
+ {{#each Globales}}
+  <tbody class="h6">
+<th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+    <th scope="col">{{DFG}}</th>
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/edhistorico">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col-md-4">
+    <h8> Ranking Libre Historico ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+           <th scope="col">DFG</th>
+           <th scope="col">PJ</th>
+
+    </tr>
+  </thead>
+ {{#each Globaleslb}}
+  <tbody class="h6">
+  <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+        <th scope="col">{{DFG}}</th>
+        <th scope="col">{{PJ}}</th>
+
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/edlibreglobal">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col-md-4">
+    <h8> Ranking Mixto Historico ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+           <th scope="col">DFG</th>
+           <th scope="col">PJ</th>
+
+    </tr>
+  </thead>
+ {{#each Globalesmix}}
+  <tbody class="h6">
+  <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+        <th scope="col">{{DFG}}</th>
+        <th scope="col">{{PJ}}</th>
+
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="edmixtaglobal">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col-md-4">
+    <h8> Ranking Femenil Historico ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+           <th scope="col">DFG</th>
+           <th scope="col">PJ</th>
+
+    </tr>
+  </thead>
+ {{#each Globalesfeme}}
+  <tbody class="h6">
+  <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+        <th scope="col">{{DFG}}</th>
+        <th scope="col">{{PJ}}</th>
+
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/edfemeglobal">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col-md-4">
+    <h8> Ranking S23 Historico ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+           <th scope="col">DFG</th>
+
+    </tr>
+  </thead>
+ {{#each Globales23}}
+  <tbody class="h6">
+  <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+        <th scope="col">{{DFG}}</th>
+
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/eds23global">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col-md-4">
+    <h8> Ranking s20 Historico ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+           <th scope="col">DFG</th>
+
+    </tr>
+  </thead>
+ {{#each Globales20}}
+  <tbody class="h6">
+  <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+        <th scope="col">{{DFG}}</th>
+
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/eds20global">ver Ranking Completo </a></h8>
+</div>
+
+<div class="col-md-4">
+    <h8> Ranking s17 Historico ED</h8>
+<table class="table table-sm table-bordered table-responsive">
+  <thead>
+    <tr>
+      <th scope="col">Equipo</th>
+
+      <th scope="col">Puntos</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+           <th scope="col">DFG</th>
+
+    </tr>
+  </thead>
+ {{#each Globales17}}
+  <tbody class="h6">
+  <th scope="col">
+    <img src="{{Escudo}}" width="35px" height="35px" alt="..." class="img-thumbnail"></div>
+
+    </th>
+    <th scope="col">{{Puntos}}</th>
+    <th scope="col">{{GF}}</th>
+    <th scope="col">{{GC}}</th>
+        <th scope="col">{{DFG}}</th>
+
+  </tbody>
+{{/each}}
+</table>
+<h8><a href="/eds17global">ver Ranking Completo </a></h8>
+</div>
